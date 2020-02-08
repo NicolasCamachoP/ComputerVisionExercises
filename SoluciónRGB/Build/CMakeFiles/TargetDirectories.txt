@@ -1,0 +1,3 @@
+/home/nicoboi/Escritorio/Visión Artificial/Taller 1/rescale_intensity/SoluciónRGB/Build/CMakeFiles/rebuild_cache.dir
+/home/nicoboi/Escritorio/Visión Artificial/Taller 1/rescale_intensity/SoluciónRGB/Build/CMakeFiles/rescale_colors_ocv.dir
+/home/nicoboi/Escritorio/Visión Artificial/Taller 1/rescale_intensity/SoluciónRGB/Build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nicoboi/Escritorio/Visión Artificial/Taller 1/rescale_intensity/SoluciónRGB/rescale_colors_ocv.cxx
+stdio.h
+-
+opencv2/opencv.hpp
+-
+
