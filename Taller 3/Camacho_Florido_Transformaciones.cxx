@@ -90,7 +90,7 @@ using namespace cv;
     
     //Rotation
     Mat dstRot;
-    dstRot=Mat::zeros(src.rows,src.cols,src.type());
+    dstRot=Mat::zeros(dstTrans.rows,dstTrans.cols,dstTrans.type());
     warpAffine(dstTrans,dstRot,Mr,src.size());
     //imshow("Rotada",dstRot);
 
@@ -100,6 +100,6 @@ using namespace cv;
     warpAffine(dstRot, dstScal, Ms, dstRot.size());
     //imshow("Escalada",dstScal);
     imwrite("Test2.png", dstScal);
-    waitKey(0);
+    //waitKey(0);
     return 0;
   } 
