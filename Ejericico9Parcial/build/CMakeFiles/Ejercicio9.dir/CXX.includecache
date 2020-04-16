@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nicoboi/Escritorio/Visión Artificial/Parcial9/NicolasCamachoEjer9.cxx
+stdio.h
+-
+opencv2/opencv.hpp
+-
+
