@@ -90,7 +90,7 @@ using namespace cv;
     
     //Rotation
     Mat dstRot;
-    dstRot=Mat::zeros(dstTrans.rows,dstTrans.cols,dstTrans.type());
+    dstRot=Mat::zeros(src.rows,src.cols,src.type());
     warpAffine(dstTrans,dstRot,Mr,src.size());
     //imshow("Rotada",dstRot);
 

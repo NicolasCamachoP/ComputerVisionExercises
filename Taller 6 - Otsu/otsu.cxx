@@ -6,9 +6,9 @@ using namespace cv;
 int main(int argc, char** argv )
 {
   // Get command line arguments
-  if( argc < 4 )
+  if ( argc < 2 )
   {
-    std::cerr << "Usage: " << argv[ 0 ] << " image_file x_factor y_factor" << std::endl;
+  	std::cerr << "Usage: " << argv[ 0 ] << " image_file" << std::endl;
     return( -1 );
 
   } // fi
@@ -27,24 +27,27 @@ int main(int argc, char** argv )
   {
     std::cerr << "Error: No image data" << std::endl;
     return( -1);
-  }
-
-  std::cout << "Image input size: " << image.size() << std::endl;
-
-  // Rescale image
-  Mat res_img;
-  resize(image, res_img, Size(), atof( argv[ 2 ] ), atof( argv[ 3 ] ), INTER_LINEAR);
-
-  std::cout << "Image output size: " << res_img.size() << std::endl;
-
-  // Write results
+  
+  } // fi
+  
+  //Save basename 
   std::stringstream ss( argv[ 1 ] );
   std::string basename;
-  getline( ss, basename, '.' );
+  getline( ss, basename ,'.' );
+  
+  //Turn into GrayScale
+  Mat image_gray;
+  cvtColor( image, image_gray, COLOR_RGB2GRAY );
+  
+  //Threshold
+  Mat image_TH;
+  threshold(image_gray, image_TH, 127, 256, THRESH_BINARY);
 
-  imwrite( basename + "_scaled.png", res_img );
 
+  //Write something
+  imwrite( basename + "_gray.png", image_gray);
+  imwrite( basename + "_ThreshTest.png", image_TH);
   return( 0 );
 }
 
-// eof - 02_scale.cxx
+// eof - example.cxx

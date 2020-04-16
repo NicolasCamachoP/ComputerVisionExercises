@@ -4,7 +4,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 ## = Project name =
 ## ================
 
-PROJECT( EXAMPLE_OCV )
+PROJECT( FILTERSOCV )
 
 ## ============
 ## = Packages =
@@ -36,5 +36,5 @@ MARK_AS_ADVANCED(
 ## = Programs to compile =
 ## =======================
 
-ADD_EXECUTABLE( example example.cxx )
-TARGET_LINK_LIBRARIES( example ${OpenCV_LIBS} )
+ADD_EXECUTABLE( pyramid filters_camacho_florido.cxx )
+TARGET_LINK_LIBRARIES( pyramid ${OpenCV_LIBS} )
